@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  socket:
+    build: .
+    restart: unless-stopped
+    command: "npm start"
+    environment:
+      - NODE_PORT=8080
+    ports:
+      - "8080:8080"
